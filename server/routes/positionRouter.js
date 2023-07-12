@@ -4,7 +4,7 @@ const router = new Router()
 
 
 router.post('/',positionController.create)
-router.get('/',)
+router.get('/',positionController.getAll)
 router.get('/:id',)
 
 

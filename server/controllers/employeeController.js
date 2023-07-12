@@ -10,7 +10,7 @@ class EmployeeController{
             let filename = uuid.v4() + ".jpg"
             let date = new Date()
             await img.mv(path.resolve(__dirname, '..', 'static', filename))
-            const employee = await Employee.create({name, img:filename, technology_id, position_id, workspace_id, employed_since: date})
+            const employee = await Employee.create({name, img:filename, employed_since: date, workspace_id, position_id, technology_id})
             return res.json(employee)
         }
         catch (e) {
