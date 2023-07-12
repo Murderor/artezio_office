@@ -7,8 +7,8 @@ const workspaceRouter = require('./worspaceRouter')
 
 router.use('/employee', employeeRouter)
 router.use('/position', positionRouter)
-router.use('technology',technologyRouter)
-router.use('workspace', workspaceRouter)
+router.use('/technology',technologyRouter)
+router.use('/workspace', workspaceRouter)
 
 
 module.exports = router

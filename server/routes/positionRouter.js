@@ -1,8 +1,9 @@
 const Router = require("express")
+const positionController = require('../controllers/positionController')
 const router = new Router()
 
 
-router.post('/',)
+router.post('/',positionController.create)
 router.get('/',)
 router.get('/:id',)
 
