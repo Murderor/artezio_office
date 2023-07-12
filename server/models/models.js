@@ -25,14 +25,14 @@ const Technology = sequelize.define('technology',{
     name:{type:DataTypes.STRING, unique:true, allowNull:false}
 })
 
-Workspace.hasMany(Employee)
-Employee.belongsTo(Workspace)
+Employee.hasOne(Workspace)
+Workspace.belongsTo(Employee)
 
-Position.hasMany(Employee)
-Employee.belongsTo(Position)
+Employee.hasOne(Position)
+Position.belongsTo(Employee)
 
-Technology.hasMany(Employee)
-Employee.belongsTo(Technology)
+Employee.hasOne(Technology)
+Technology.belongsTo(Employee)
 
 module.exports={
     Employee,
